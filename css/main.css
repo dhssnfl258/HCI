@@ -3,9 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cantata+One&display=swap');
 label, #toggle{display: none;}
 
+@font-face {
+
+    src : url("../font/D2CodingBold-Ver1.3-20171129.ttf"); 
+    font-family: "D2"; 
+}
+@font-face{
+    src : url("../font/NanumGothicCoding.ttf"); 
+    font-family: "nanum";
+}
 body {
     padding: 0;
     margin: 0;
+    font-family: "D2"; 
   }
 .bottom{
   position:fixed; 
@@ -18,8 +28,7 @@ body {
   opacity:0.7;
 }
 p, a{
-    text-shadow: 0 0 8px rgba(8, 8, 8, 0.3);
-    font-family: Courier, monospace;
+    font-family: nanum;
     margin: 0.8em 0;
     font-size: 18px;
     color: rgb(0, 0, 0);
@@ -156,7 +165,18 @@ a:hover { color: none; text-decoration: none;}
       }
   }
   @media (max-width:768px){
-      
+      #panel{
+          display:none;
+      }
+      #inha{
+          display:block;
+          margin-top:100px;
+          text-align: center;
+          justify-content: center;
+      }
+      #inin{
+          display:none;
+      }
       body{
           overflow-x:hidden;
           margin-left:100px;
@@ -182,15 +202,20 @@ a:hover { color: none; text-decoration: none;}
     #menu li {
          display: block;width:100%; text-align:center; padding:4px;
     }
+
+
+
     label {display:block; text-align:center;background-repeat: no-repeat;background-position: 97% 10px;
         font-size:20px; padding:4px 3%;
     }
-    .finder {
+    .paper-search{
         display:none;
     }
   }
 
-  
+  .paper-search{
+    float:right; margin-top:20px;width:70%
+  }
   /* main button */
   .btn {
     display: inline-block;
@@ -250,12 +275,14 @@ a:hover { color: none; text-decoration: none;}
 .profile {
     font-size:15px;
     clear:both;
+    
 }
 .profile h4{
     font-size:30px;
 }
 .profile h5{
     font-size:20px;
+    font-family:nanum;
 }
 .profile div{
     float:center;
@@ -274,7 +301,7 @@ a:hover { color: none; text-decoration: none;}
 .research_list{
     list-style: none; font-size: 13px; display: flex; font-weight:bold;
 }
-
+ 
 .research_list li{
     margin:auto;
 }
@@ -284,9 +311,8 @@ a:hover { color: none; text-decoration: none;}
     margin-top: 13px;
 }
 .research_list img{
-    filter: invert(100%);
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     opacity:0.9;
 }
 
@@ -299,6 +325,9 @@ a:hover { color: none; text-decoration: none;}
 }
 .research_img2{
     width:130px; height:150px;filter: invert(100%); margin-right:50px; margin-bottom:10px;
+}
+.research_list p{
+    font-size:16px;
 }
 
 .hidden{
@@ -345,6 +374,15 @@ hr {
 .finder li a:hover{
     color:rgba(247, 43, 43, 0.8);
     font-weight: bold;
+}
+.homepage{
+    color: red;
+    font-weight: bold
+}
+
+.pap {
+    margin-left: 25px;
+    font-family: nanum;
 }
 /* .hompage{
     font-size: 0.925rem;
